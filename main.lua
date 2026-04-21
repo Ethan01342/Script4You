@@ -1,4 +1,3 @@
--- [[ SCRIPT4YOU - ANTI-AFK ASYLUM EDITION ]]
 local CoreGui = game:GetService("CoreGui")
 local Players = game:GetService("Players")
 local VirtualUser = game:GetService("VirtualUser")
@@ -94,8 +93,8 @@ CreateBtn(KeyElements, "GET TRIAL (1 HR)", UDim2.new(0.5, -160, 0, 140), Color3.
 end)
 
 CreateBtn(KeyElements, "BUY LIFETIME ($2)", UDim2.new(0.5, -160, 0, 185), Color3.fromRGB(25, 25, 25), function() 
-    setclipboard("https://scripts4you23.mysellauth.com")
-    Notify("Shop Link Copied!")
+    setclipboard("[https://scripts4you23.mysellauth.com](https://scripts4you23.mysellauth.com)")
+    Notify("Link Copied! Paste in browser.")
 end)
 
 task.spawn(function()
@@ -104,10 +103,8 @@ task.spawn(function()
     end)
 end)
 
--- Dragging
 local UIS = game:GetService("UserInputService")
 local drag, dStart, sPos
 Main.InputBegan:Connect(function(i) if i.UserInputType == Enum.UserInputType.MouseButton1 then drag = true dStart = i.Position sPos = Main.Position end end)
 UIS.InputChanged:Connect(function(i) if drag and i.UserInputType == Enum.UserInputType.MouseMovement then local d = i.Position - dStart Main.Position = UDim2.new(sPos.X.Scale, sPos.X.Offset + d.X, sPos.Y.Scale, sPos.Y.Offset + d.Y) end end)
 UIS.InputEnded:Connect(function(i) if i.UserInputType == Enum.UserInputType.MouseButton1 then drag = false end end)
-
