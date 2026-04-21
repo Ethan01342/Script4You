@@ -16,7 +16,7 @@ ScreenGui.ResetOnSpawn = false
 
 local Main = Instance.new("Frame", ScreenGui)
 Main.Size = UDim2.new(0, 360, 0, 300)
-Main.Position = UDim2.new(0.5, -180, 0.5, -150)
+Main.Position = UDim2.new(0.5, -180, 0.5, -140)
 Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
 local Stroke = Instance.new("UIStroke", Main)
@@ -94,7 +94,7 @@ end)
 
 CreateBtn(KeyElements, "BUY LIFETIME ($2)", UDim2.new(0.5, -160, 0, 185), Color3.fromRGB(25, 25, 25), function() 
     setclipboard("[https://scripts4you23.mysellauth.com](https://scripts4you23.mysellauth.com)")
-    Notify("Link Copied! Paste in browser.")
+    Notify("Shop Link Copied!")
 end)
 
 task.spawn(function()
